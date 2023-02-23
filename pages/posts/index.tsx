@@ -1,14 +1,12 @@
 import Link from 'next/link'
-const PostList: React.FC<{posts:any}> = ({ posts }) => {
+const PostList: React.FC<{ posts: any }> = ({ posts }) => {
     return (
         <div>
             {posts.map((post: any) => {
                 return (
                     <div key={post.id}>
-                        <Link href={`/posts/${post.id}`}>
-                            <h4>{post.id}. {post.title}</h4>
-                        </Link>
-                        <hr/>
+                        <h4>{post.id}. {post.title}</h4>
+                        <hr />
                     </div>
                 )
             })}
