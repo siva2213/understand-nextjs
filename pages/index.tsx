@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from '../styles/App.module.css'
 import { useRouter } from 'next/router'
 
 function Home() {
@@ -10,9 +11,9 @@ function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <div>
+            <div className={styles.linkContainer}>
 
-                <Link href='/product'>
+                <Link href='/product' >
                     Product
                 </Link>
             </div>
