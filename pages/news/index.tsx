@@ -12,7 +12,7 @@ const NewsArticleList: React.FC<{articles: []}> = ({ articles}) => {
         <h1>News Article List</h1>
         {articles.map((article: articleData) => {
             return (
-                <div>
+                <div key={article.title}>
                     <h3>{article.title} {article.description}</h3>
                     <h4>{article.category}</h4>
                     <hr/>
